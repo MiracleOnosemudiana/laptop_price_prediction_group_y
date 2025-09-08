@@ -1,4 +1,4 @@
-# 💻 Laptop Price Prediction– Group Project
+#  Laptop Price Prediction– Group Project
 
 ##  Project Overview
 This project is a **Mini-Project in Machine Learning** that aims to predict the selling price of laptops based on their specifications.  
@@ -16,7 +16,7 @@ It demonstrates an **end-to-end ML pipeline**, including **data preprocessing, e
 
 ---
 
-## 📊 Dataset
+##  Dataset
 We use the **Laptop Price Dataset** from Kaggle:  
  [Laptop Price Dataset](https://www.kaggle.com/datasets/muhammetvarl/laptop-price)
 
@@ -29,12 +29,19 @@ We use the **Laptop Price Dataset** from Kaggle:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 laptop_price_prediction/
+│── model/
+│ ├── laptop_price_model.pkl
+│ ├── model_features.pkl
+│ ├── train_test_split.pkl
+│
 │── data/
-│ ├── raw/ # Original dataset
+│ |── final/  # Final feature-engineered dataset
+│ ├── encoded/ # Encoded datasets
 │ ├── processed/ # Cleaned datasets
+│ ├── raw/ # Original dataset
 │
 │── notebooks/ # Jupyter notebooks for each stage
 │ ├── 01_data_cleaning.ipynb
@@ -85,6 +92,10 @@ laptop_price_prediction/
 - **Blocked** – if someone is stuck.  
 
 ###  Task Breakdown
+- Note that:-
+    Random State = 9
+    Test Size (%) = 25
+
 #### Data Cleaning
 - Handle missing values  
 - Handle outliers  
