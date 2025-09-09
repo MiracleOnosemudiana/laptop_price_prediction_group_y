@@ -1,9 +1,39 @@
+# Ignore everything by default
+*
+
+# Keep key project folders
+!models/
+!data/
+!notebooks/
+!streamlit_app/
+!report/
+
+# Keep root-level important files
+!README.md
+!.gitignore
+
+# Allow contents of these folders
+!model/**
+!data/**
+!notebooks/**
+!streamlit_app/**
+!report/**
+
 # Ignore virtual environment
 venv/
+.env/
 
-# Ignore Python cache files
+# Ignore editor settings
+.vscode/
+*.code-workspace
+
+# Ignore Python junk
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.pkl.tmp
+*.log
 
 # Ignore Jupyter checkpoints
-.ipynb_checkpoints/
+*.ipynb_checkpoints/

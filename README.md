@@ -50,27 +50,21 @@ laptop_price_prediction/
 │ ├── 04_model_building.ipynb
 │ ├── 05_model_evaluation.ipynb
 │
-│── src/ # Python scripts (modular code)
-│ ├── data_preprocessing.py
-│ ├── eda.py
-│ ├── features.py
-│ ├── model.py
-│ ├── evaluation.py
-│
 │── streamlit_app/ # Streamlit deployment
 │ ├── app.py
 │ ├── requirements.txt
 │
-│── reports/ # Documentation
-│ ├── final_report.docx/pdf
-│ ├── eda_visualizations/
+│── report/ # Documentation
+│ ├── final_report.docx
 │
-│── README.md # Project overview
-│── .gitignore # Ignore unnecessary files
-
+│── venv/
+|
+├── README.md # Project overview
+├── .gitignore # Ignore unnecessary files
 
 
 ---
+
 
 ##  Team Roles (9 Members)
 - **Data Cleaning (2)** → Handle missing values, outliers, convert RAM/Weight/Memory.  
@@ -184,5 +178,5 @@ laptop_price_prediction/
 ##  How to Run
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/your_username/laptop_price_prediction.git
-cd laptop_price_prediction
+git clone https://github.com/MiracleOnosemudiana/laptop_price_prediction_group_y.git
+cd laptop_price_prediction_group_y
