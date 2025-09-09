@@ -1,11 +1,19 @@
+import os
 import numpy as np
 import pandas as pd
 import streamlit as st
 import joblib
 
 
-lin_reg_mod = joblib.load("../models/laptop_price_model.pkl")
-model_features = joblib.load("../models/model_features.pkl")
+MODEL_DIR = os.path.join(os.path.dirname(__file__), "../models")
+
+@st.cache_resource
+def load_model():
+    lin_mod = joblib.load(os.path.join(MODEL_DIR, "laptop_price_model.pkl"))
+    features = joblib.load(os.path.join(MODEL_DIR, "model_features.pkl"))
+    return lin_mod, features
+
+lin_reg_mod, model_features = load_model()
 
 
 st.title("Laptop Price Prediction")
