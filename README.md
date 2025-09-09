@@ -52,7 +52,8 @@ laptop_price_prediction/
 │
 │── streamlit_app/ # Streamlit deployment
 │ ├── app.py
-│ ├── requirements.txt
+|
+├── requirements.txt
 │
 │── report/ # Documentation
 │ ├── final_report.docx
