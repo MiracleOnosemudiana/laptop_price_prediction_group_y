@@ -5,15 +5,9 @@ import streamlit as st
 import joblib
 
 
-MODEL_DIR = os.path.join(os.path.dirname(__file__), "models")
-
-@st.cache_resource
-def load_model():
-    lin_reg_mod = joblib.load(os.path.join(MODEL_DIR, "laptop_price_model.kl"))
-    model_features = joblib.load(os.path.join(MODEL_DIR, "model_features.pkl"))
-    return lin_reg_mod, model_features
-
-lin_reg_mod, model_features = load_model()
+MODEL_DIR = "models"
+lin_reg_mod = joblib.load(os.path.join(MODEL_DIR, "laptop_price_model.pkl"))
+model_features = joblib.load(os.path.join(MODEL_DIR, "model_features.pkl"))
 
 
 st.title("Laptop Price Prediction")
@@ -54,7 +48,7 @@ ppi = ((screen_width**2 + screen_height**2) ** 0.5) / inches
 # ---------------------------
 with st.expander("Storage"):
     hdd = st.selectbox("HDD (GB)", [0, 128, 256, 512, 1024])
-    ssd = st.selectbox("SSD (GB)", [0, 128, 256, 512, 1024])
+    ssd = st.selectbox("SSD (GB)", [128, 0, 256, 512, 1024])
     flash = st.selectbox("Flash Storage (GB)", [0, 2, 4, 8, 16, 64])
     total_storage = hdd + ssd + flash
 
@@ -133,10 +127,10 @@ with st.expander("Other Features"):
     company_selected = st.selectbox(
         "Company",
         [
+            "HP",
             "Apple",
             "Asus",
             "Dell",
-            "HP",
             "Lenovo",
             "MSI",
             "Razer",
@@ -146,7 +140,7 @@ with st.expander("Other Features"):
         ],
     )
     type_selected = st.selectbox(
-        "Type", ["Gaming", "Netbook", "Notebook", "Ultrabook", "Workstation"]
+        "Type", ["Notebook", "Gaming", "Netbook", "Ultrabook", "Workstation"]
     )
     os_selected = st.selectbox(
         "Operating System", ["Windows", "MacOS", "Linux", "Chrome OS", "No OS"]

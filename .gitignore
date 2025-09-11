@@ -13,7 +13,7 @@
 !.gitignore
 
 # Allow contents of these folders
-!model/**
+!models/**
 !data/**
 !notebooks/**
 !streamlit_app/**
